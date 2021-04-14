@@ -1,0 +1,34 @@
+@protocol= http
+@domainname= localhost
+@port= {{$dotenv PORT}}
+@path=v1
+@baseUrl = {{protocol}}://{{domainname}}:{{port}}/{{path}}
+
+### Route GET /bookmakers
+
+GET {{baseUrl}}/bookmakers
+
+### Route GET /bookmakers/{id}
+
+GET {{baseUrl}}/bookmakers/1
+
+### Route POST /bookmakers
+
+POST {{baseUrl}}/bookmakers
+Content-Type: application/json
+
+{
+    "brand": "LicorneStars",
+    "slug":"liconerStars.fr"
+}
+
+#### PATCH /bookmakers/:{id}
+PATCH  {{baseUrl}}/bookmakers/2
+Content-Type: application/json
+
+{
+    "slug": "poneyStar.fr"
+}
+
+### Route DELETE /bookmakers/{id}
+DELETE  {{baseUrl}}/bookmakers/2

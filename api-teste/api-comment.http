@@ -1,0 +1,40 @@
+@protocol= http
+@domainname= localhost
+@port= {{$dotenv PORT}}
+@path=v1
+@baseUrl = {{protocol}}://{{domainname}}:{{port}}/{{path}}
+
+### Route GET /comments
+
+GET {{baseUrl}}/comments
+
+### Route GET /comments/:{id}
+
+GET {{baseUrl}}/comments/21
+
+
+### Route POST /comments
+
+POST {{baseUrl}}/comments
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjYsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE2MTYwNzEyMzMsImV4cCI6MTYxNjA3NDgzM30.i0U6HpeZJtcyr3WOtB_ectqMkwCUOIhNrh8J83L5sBk 
+Content-Type: application/json
+
+{
+    "content": "Grave a Yabon j'ai doubleé mon RSA",
+    "rate":3,
+    "user_id": 2
+}
+
+### Route PATCH /comments/{id}
+
+PATCH {{baseUrl}}/comments/7
+Content-Type: application/json
+
+{
+    "content":"bloblbobl"
+}
+
+### DELETE GET /comments/:{id}
+
+DELETE {{baseUrl}}/comments/60
+

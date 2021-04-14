@@ -1,0 +1,59 @@
+@protocol= http
+@domainname= localhost
+@port= {{$dotenv PORT}}
+@path=v1
+@baseUrl = {{protocol}}://{{domainname}}:{{port}}/{{path}}
+
+
+### Route GET /user
+
+GET {{baseUrl}}/user
+
+
+### Route GET /user/logout
+
+GET {{baseUrl}}/user/logout
+
+### Route Get /user/{id}
+
+
+GET {{baseUrl}}/user/2
+
+
+### Route Post /user
+POST {{baseUrl}}/user/login
+Content-Type: application/json
+
+{
+    "mail": "yabon-prono@outlook.fr",
+    "password": "yabonprono"
+}
+
+### Route Post /user
+POST {{baseUrl}}/user/register
+Content-Type: application/json
+
+{
+    "firstname" : "Brice",
+    "lastname" : "Bacconium",
+    "mail": "brice.guillozet@gmail.com",
+    "password": "bacconium",
+    "role" : "admin"
+    
+}
+
+### Route Delete /user/{id}
+
+DELETE  {{baseUrl}}/user/105
+
+### Route Patch /user/{id}
+PATCH  {{baseUrl}}/user/17
+Content-Type: application/json
+
+{
+
+    "role" : "admin"
+}
+
+### Route Patch /user/{id}
+GET https://api.the-odds-api.com/v3/odds/?apiKey=0ed042d4a8306e9e78e0ae78c7a290df&sport=soccer_epl&region=eu&mkt=h2h

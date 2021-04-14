@@ -1,0 +1,14 @@
+%syntax-version=1.0.0
+%project=yabon-prono
+
+
+
+rebuild-domain-v2 2021-03-12T08:33:03Z Julien Oclock <julien.lxpro@gmail.com> # on repart sur une v2 de la bdd
+rebuild-table-v2 2021-03-12T08:38:49Z Julien Oclock <julien.lxpro@gmail.com> # New table more more better
+insert-data 2021-03-12T09:55:47Z Julien Oclock <julien.lxpro@gmail.com> # insertion de data avant la mise ne place des contraintes
+views-v2 2021-03-12T10:56:58Z Julien Oclock <julien.lxpro@gmail.com> # add view on table for v2 bdd
+function-resolved-matches 2021-03-15T08:58:25Z Julien Oclock <julien.lxpro@gmail.com> # add fuction to resolved match
+view-three_last_bet_incoming 2021-03-16T08:42:56Z Julien Rodriguez <pro.julienrodriguez@gmail.com> # add view three_last_bet_incoming
+bet-with-gain 2021-03-16T12:00:34Z Julien Oclock <julien.lxpro@gmail.com> # nouvelle view pour les bet avec les gains
+view-all_comment 2021-03-17T09:14:58Z Julien Rodriguez <pro.julienrodriguez@gmail.com> # add view all_comment
+constraint 2021-03-18T08:39:02Z Julien Oclock <julien.lxpro@gmail.com> # constraint on table

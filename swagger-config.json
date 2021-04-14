@@ -1,0 +1,19 @@
+{
+    "swaggerDefinition": {
+        "info": {
+            "description": "Ceci est une api de pronistique sportif",
+            "title": "Yabon prono",
+            "version": "1.0.0"
+        },
+        "host": "yabon-api-back.herokuapp.com",
+        "basePath": "/v1",
+        "produces": [
+            "application/json"
+        ]
+
+    },
+    "files": [
+        "./app/router.js",
+        "./app/models/betsMapper.js"
+    ]
+}

@@ -1,0 +1,75 @@
+@protocol= http
+@domainname= localhost
+@port= {{$dotenv PORT}}
+@path=v1
+@baseUrl = {{protocol}}://{{domainname}}:{{port}}/{{path}}
+
+### Route GET /bets
+
+GET {{baseUrl}}/bets
+
+
+### Route GET /allLastPlayedBets
+
+GET {{baseUrl}}/allLastPlayedBets
+
+### Route GET /lastPlayedBet
+
+GET {{baseUrl}}/lastPlayedBet
+
+### Route GET /allLastIncomingBets
+
+GET {{baseUrl}}/allLastIncomingBets
+
+### Route GET /lastBetIncoming
+
+GET {{baseUrl}}/lastBetIncoming
+
+
+### Route GET /bets/{id}
+
+GET {{baseUrl}}/bets/21
+
+
+
+
+### Route GET /bestBet
+
+GET {{baseUrl}}/bestBet
+
+### Route GET /worstBet
+
+GET {{baseUrl}}/worstBet
+
+### Route POST /bets
+
+POST {{baseUrl}}/bets
+Content-Type: application/json
+
+{
+    "beting_team" :"PSG",
+    "bet_odds" : 2.25,
+    "mise" :50,
+    "trust" : 4, 
+    "comment" : "fonce ma gueule !", 
+    "match_id" :39, 
+    "user_id": 1, 
+    "bookmaker_id": 1
+}
+
+### Route DELETE /bets/{id}
+DELETE  {{baseUrl}}/bets/45
+
+
+
+#### PATCH /bets/:{id}
+PATCH  {{baseUrl}}/bets/53
+Content-Type: application/json
+
+{
+    "gain": 1500
+}
+
+### Route GET /threeLastBetIncoming
+
+GET {{baseUrl}}/threeLastBetIncoming

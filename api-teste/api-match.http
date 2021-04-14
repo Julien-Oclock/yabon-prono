@@ -1,0 +1,54 @@
+@protocol= http
+@domainname= localhost
+@port= {{$dotenv PORT}}
+@path=v1
+@baseUrl = {{protocol}}://{{domainname}}:{{port}}/{{path}}
+
+### Route GET /matchs
+
+GET {{baseUrl}}/matchs
+
+### Route GET /matchs/{id}
+
+GET {{baseUrl}}/matchs/43
+
+
+### Route DELETE /matchs/{id}
+DELETE  {{baseUrl}}/matchs/43
+
+### Route POST /matchs
+
+POST {{baseUrl}}/matchs
+Content-Type: application/json
+
+{
+    "host_team": "Angers",
+    "visitor": "Montpellier",
+    "odds_1" : 2.40,
+    "odds_2" : 2.88,
+    "odds_draw" : 3.15
+}
+
+
+
+#### PATCH /matchs/:{id}
+PATCH  {{baseUrl}}/resolve/43
+Content-Type: application/json
+
+{
+    "score_host": 1,
+    "winner" : "Lyon",
+    "score_visitor": 0
+}
+
+
+
+### Route GET /matchs
+
+GET {{baseUrl}}/matchs
+
+### Route GET /matchsIncoming
+
+GET {{baseUrl}}/matchsIncoming
+Content-Type: application/json
+
