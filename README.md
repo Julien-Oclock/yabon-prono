@@ -21,3 +21,6 @@
       -squitch
   
 ## Structure des données
+![Capture](https://user-images.githubusercontent.com/71630710/114690438-fd554f80-9d16-11eb-8fdd-db0a561feab3.PNG)
+
+
